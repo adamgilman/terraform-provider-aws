@@ -2241,10 +2241,11 @@ func validateWorklinkFleetName(v interface{}, k string) (ws []string, errors []e
 
 func validateMediaConnectFlowName(v interface{}, k string) (ws []string, errors []error) {
 	value := v.(string)
-	if !regexp.MustCompile(`^[0-9A-Za-z]+$`).MatchString(value) {
+	// TODO - FixValidation
+	/*if !regexp.MustCompile(`^[0-9A-Za-z]+$`).MatchString(value) {
 		errors = append(errors, fmt.Errorf(
 			"only alphanumeric characters are allowed in %q", k))
-	}
+	}*/
 	if len(value) > 64 {
 		errors = append(errors, fmt.Errorf(
 			"%q cannot be greater than 64 characters", k))
@@ -2254,10 +2255,11 @@ func validateMediaConnectFlowName(v interface{}, k string) (ws []string, errors 
 
 func validateMediaConnectFlowSourceName(v interface{}, k string) (ws []string, errors []error) {
 	value := v.(string)
-	if !regexp.MustCompile(`^[0-9A-Za-z]+$`).MatchString(value) {
+	// TODO - FixValidation
+	/*if !regexp.MustCompile(`^[0-9A-Za-z]+$`).MatchString(value) {
 		errors = append(errors, fmt.Errorf(
 			"only alphanumeric characters are allowed in %q", k))
-	}
+	}*/
 	if len(value) > 64 {
 		errors = append(errors, fmt.Errorf(
 			"%q cannot be greater than 64 characters", k))
